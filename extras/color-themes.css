@@ -1,0 +1,34 @@
+/* Extra color palettes (copy one block to override :root variables) */
+
+/* PURPLE */
+:root.purple {
+  --bg:#0e0b14; --text:#ece6ff; --panel:#161125; --muted:#b9a8ff;
+  --brand:#a06cd5; --brand2:#7752fe; --card:#130f1d; --ring:#7752fe33; --line:#281f3d;
+}
+
+/* GREEN */
+:root.green {
+  --bg:#07130d; --text:#e6ffef; --panel:#0d1a13; --muted:#9fe3bb;
+  --brand:#22c55e; --brand2:#16a34a; --card:#0a1510; --ring:#22c55e33; --line:#173024;
+}
+
+/* ORANGE */
+:root.orange {
+  --bg:#120c07; --text:#fff3e8; --panel:#1a120d; --muted:#ffd1a6;
+  --brand:#ff8a00; --brand2:#ff5e00; --card:#140f0a; --ring:#ff8a0033; --line:#2a1e13;
+}
+
+/* USAGE:
+Add a class to the <html> or <body> element, e.g.:
+  <body class="light purple">
+and those variables will take effect.
+*/
+
+body.klight {
+  --bg: #ffffff;
+  --text: #111111;
+  --panel: #f5f7fa;
+  --muted: #555;
+  --card: #ffffff;
+  --line: #e5e7eb;
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="orange">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roger – Semantic Portfolio</title>
+    <meta name="description" content="Responsive semantic HTML portfolio with light/dark mode toggle." />
+
+    <!-- Optional theme helpers you already had -->
+    <link rel="stylesheet" href="extras/color-themes.css">
+
+    <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <nav aria-label="Primary">
+          <span class="logo">⚡ <strong>Roger</strong></span>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="toggle" id="modeToggle" aria-label="Toggle color mode">🌙</button></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="container hero" id="hero" aria-labelledby="hero-title">
+        <section>
+          <p class="tag">💻 Front-End Developer</p>
+          <h1 id="hero-title">Hello, I'm Roger — I build fast, clean, responsive websites.</h1>
+          <p class="muted">
+            This semantic HTML portfolio template is easy to edit and includes light/dark mode built with pure CSS + a tiny script.
+          </p>
+          <p style="margin-top:1rem;">
+            <a class="btn" href="#projects">View Projects</a>
+          </p>
+        </section>
+
+        <!-- Cover image / avatar (you can replace the src anytime) -->
+        <aside style="text-align:center;">
+          <img
+            src="cover.png"
+            alt="Portrait or cover image for Roger"
+            style="width:100%;max-width:280px;border-radius:50%;border:3px solid var(--brand);margin-bottom:1rem;">
+          <p><strong>Tech Stack</strong></p>
+          <p class="muted">HTML • CSS • JavaScript • React • Shopify</p>
+        </aside>
+      </section>
+
+      <!-- Projects -->
+      <section class="container" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <p class="muted">Replace these cards with your real work.</p>
+
+        <section class="cards" role="list">
+          <article class="card" role="listitem">
+            <h3>Personal Portfolio Website</h3>
+            <p class="muted">
+              Built my own responsive portfolio using HTML, CSS, and JavaScript. Includes dark mode and smooth scroll.
+            </p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>E-Commerce Homepage</h3>
+            <p class="muted">
+              Created a clean landing page design for an online store using Shopify and Liquid templates.
+            </p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>JavaScript Animation Demo</h3>
+            <p class="muted">
+              Used GSAP to create interactive animations for a portfolio showcase.
+            </p>
+          </article>
+        </section>
+      </section>
+
+      <!-- About -->
+      <section class="container" id="about" style="margin-top:3rem;">
+        <h2>About Me</h2>
+
+        <section class="about-grid">
+          <article>
+            <p class="muted">
+              I’m Roger — a front-end student learning modern web development and building clean UI templates.
+              I enjoy turning ideas into interactive, accessible websites and exploring new design trends.
+            </p>
+          </article>
+
+          <!-- ⭐ Insert your personal photo later by changing the src -->
+          <figure style="text-align:center;">
+            <img
+              src="images/your-photo.jpg"
+              alt="Portrait of Roger"
+              style="width:100%;max-width:240px;border-radius:50%;border:3px solid var(--brand);box-shadow:0 4px 15px #0003;">
+            <figcaption class="muted" style="margin-top:.5rem;">Front-End Developer</figcaption>
+          </figure>
+        </section>
+      </section>
+
+      <!-- Contact -->
+      <section class="container" id="contact" style="margin-top:3rem;">
+        <h2>Contact</h2>
+        <p class="muted">
+          Interested in working together? Email me at
+          <a href="mailto:rogerdushime@yahoo.co.uk">rogerdushime@yahoo.co.uk</a>.
+        </p>
+        <p class="muted">
+          Connect with me:
+          <a href="https://github.com/yourusername">GitHub</a> •
+          <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <section class="container">
+        © <time id="year"></time> Roger. Built with semantic HTML + CSS only.
+      </section>
+    </footer>
+
+    <script>
+      // Color mode toggle
+      const toggle = document.getElementById('modeToggle');
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (prefersLight) { document.body.classList.add('light'); toggle.textContent = '☀️'; }
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('light');
+        const isLight = document.body.classList.contains('light');
+        toggle.textContent = isLight ? '☀️' : '🌙';
+      });
+
+      // Footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
